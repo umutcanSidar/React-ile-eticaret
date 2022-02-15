@@ -1,0 +1,77 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+// Colors
+
+$menuTextColor: rgba(255, 255, 255, 0.56);
+$menuTextColorHover: #fff;
+
+ion-icon {
+  font-size: 24px;
+}
+
+.navbar-expand-lg .navbar-collapse {
+  flex-basis: 100%;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 0;
+  margin-right: 15px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+
+nav {
+  .navbar-nav .dropdown-menu {
+    right: 0;
+    left: unset;
+  }
+  .dropdown-toggle::after {
+    display: none;
+  }
+  .navbar-brand {
+    margin: 0;
+  }
+  .basketContainer {
+    padding: 0 5px;
+    text-align: center;
+  }
+}
+
+footer {
+  background-color: rgba(33, 37, 41, 1);
+  padding: 30px 0;
+  color: #fff;
+  .custom-list-item {
+    background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+    color: $menuTextColor;
+  }
+  .list-group-item {
+    border: none;
+  }
+  .logo {
+    margin-top: 0.5em;
+    display: block;
+    color: $menuTextColor;
+    text-decoration: none;
+    &:hover {
+      color: $menuTextColorHover;
+    }
+  }
+}
+
+.slider {
+  color: #fff;
+}
+
+.product-cards {
+  .price {
+    font-size: 24px;
+    font-weight: bold;
+  }
+}
