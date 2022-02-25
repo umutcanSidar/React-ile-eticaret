@@ -1,9 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 
+import axios from "axios";
+
 const Header = () => {
   const [basket, setBasket] = useState("");
+
+  // useEffect(() => {
+  //   axios
+  //     .post(
+  //       "http://node-env.eba-ucq7mymu.us-east-2.elasticbeanstalk.com/v1/auth/register/",
+  //       { email: "umutcansidar@gmail.com" }
+  //     )
+  //     .then((data, err) => {
+  //       console.log(data.data);
+  //     });
+  // }, []);
+
   // TODO: Sepet oluşturulacak.
   return (
     <Navbar bg="dark" expand="lg" variant="dark">
