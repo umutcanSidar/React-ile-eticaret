@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [basket, setBasket] = useState("");
@@ -18,20 +19,20 @@ const Header = () => {
   //     });
   // }, []);
 
-  // TODO: Sepet oluşturulacak.
+  // TODO: Sepet state'ten çekilecek.
   return (
     <Navbar bg="dark" expand="lg" variant="dark">
       <Container>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Brand href="/">E-Commerce with React</Navbar.Brand>
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="">
+          <Nav className="ms-5">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/products">Products</Nav.Link>
           </Nav>
         </Navbar.Collapse>
-        <Navbar.Brand href="/">E-Commerce with React</Navbar.Brand>
-        <Navbar.Collapse>
-          <Nav className="ms-auto">
+        <Navbar.Collapse className="justify-content-end">
+          <Nav>
             <NavDropdown
               menuVariant="dark"
               title={
@@ -50,6 +51,24 @@ const Header = () => {
                   <Nav.Item>Sepetiniz boş</Nav.Item>
                 </div>
               )}
+            </NavDropdown>
+            <NavDropdown
+              menuVariant="dark"
+              title={<ion-icon name="person-circle"></ion-icon>}
+              id="basic-nav-dropdown"
+            >
+              <NavDropdown.Item>
+                <Nav.Link to={"/profile"}>Profile</Nav.Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                <Nav.Link to={"/settings"}>Settings</Nav.Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                <Nav.Link to={"/my-orders"}>My Orders</Nav.Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                <Nav.Link to={"/logout"}>Logout</Nav.Link>
+              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

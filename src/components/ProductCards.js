@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Col, Row, Card, Button, Spinner } from "react-bootstrap";
 
-import { datas } from "../../src/datas";
+import { datas } from "../datas";
 
 const ProductCards = () => {
   const [products, setProducts] = useState([]);
